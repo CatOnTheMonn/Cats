@@ -1,0 +1,19 @@
+h1 {
+    color: rgb(151, 176, 218);
+    text-align: center;
+    background-color: rgb(233, 241, 253);
+    border-radius: 0.3em;
+    border-style: solid;
+    font-family: monospace;
+    font-size: 3em;
+}
+.cat {
+    border-radius: 50%;
+}
+p {
+    padding: 20px;
+    background-color: rgb(245, 211, 234);
+    border-radius: 1em;
+    font-family: monospace;
+    font-size: 1.1 em;
+}
