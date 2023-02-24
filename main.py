@@ -13,6 +13,8 @@ def cat():
     if request.method == 'POST':
         if request.form.get('cat') in cats:
             return cats[request.form.get('cat')]
+        else:
+            return render_template('not_found.html')
 
 folder = os.getcwd()
 app = Flask(__name__, template_folder=folder, static_folder=folder)
