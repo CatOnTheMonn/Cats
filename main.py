@@ -14,7 +14,7 @@ def cat():
         if request.form.get('cat') in cats:
             return cats[request.form.get('cat')]
         else:
-            return render_template('not_found.html')
+            return render_template('not_found3.0.html')
 
 folder = os.getcwd()
 app = Flask(__name__, template_folder=folder, static_folder=folder)
