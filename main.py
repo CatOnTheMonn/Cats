@@ -11,8 +11,9 @@ def root():
 
 def cat():
     if request.method == 'POST':
-        if request.form.get('cat') in cats:
-            return cats[request.form.get('cat')]
+        cat_breed = request.form.get('cat')
+        if cat_breed in cats:
+            return render_template('cat_info.html', breed=cat_breed, cat_info=cats[cat_breed]['info'], image=cats[cat_breed]['image'])
         else:
             return render_template('not_found3.0.html')
 
