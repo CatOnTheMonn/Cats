@@ -1,129 +1,148 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>^._.^ cat info</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid bg-secondary-subtle">
-        <a class="navbar-brand" href="#">
-          <img src="{{url_for('static', filename='logo.png')}}" alt="Logo" height="24" class="d-inline-block align-text-top">
-        </a>
-        <form class="d-flex" role="search" method="post" action="/cat">
-          <input class="form-control me-2" type="search" name="cat">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>^._.^ cat info</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid bg-secondary-subtle">
+      <a class="navbar-brand" href="#">
+        <img src="{{url_for('static', filename='logo.png')}}" alt="Logo" height="24"
+          class="d-inline-block align-text-top">
+      </a>
+      <form class="d-flex" role="search" method="post" action="/cat">
+        <input class="form-control me-2" type="search" name="cat">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{url_for('static', filename='cat_index_1.jpeg')}}" class="d-block w-100" alt="...">
       </div>
-    </nav>
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <h4>Топ котиків</h4>
+  </div>
+  <div class="container text-center" style="padding-top: 2em;">
+    <div class="row">
+    <div class="col-lg-4">
+      <div class="card">
+        <img src="https://faunistics.com/wp-content/uploads/2020/07/1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Манчкін</h5>
+          <p class="card-text">Впреше такий тип кішок помітили в 1930 році в Англії, але через деякий час вони зникли з
+            невідомих причин.</p>
+          <form class="d-flex justify-content-center" role="search" method="post" action="/cat">
+            <input type="search" name="cat" value="Манчкін" hidden>
+            <button class="btn btn-outline-success" type="submit">Детальніше</button>
+          </form>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{{url_for('static', filename='cat_index_1.jpeg')}}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card">
+        <img src="https://www.ferra.ru/imgs/2022/03/28/06/5330659/67d72c425d00e3d45f382a1841f907b571e52296.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Канадський сфінкс</h5>
+          <p class="card-text">Вважають, що лисі кішки були відомі ацтекам. Вони потрапили в розплідник у штаті Орегон,
+            де й поклали початок основним лініям канадських сфінксів.</p>
+          <form class="d-flex justify-content-center" role="search" method="post" action="/cat">
+            <input type="search" name="cat" value="Канадський сфінкс" hidden>
+            <button class="btn btn-outline-success" type="submit">Детальніше</button>
+          </form>
+        </div>
+      </div>
+    </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <img
+            src="https://s.032.ua/section/newsInText/upload/images/news/intext/000/051/430/bengalcat_5dca69bb49d9a.jpg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Бенгальська</h5>
+            <p class="card-text">Бенгальські кішки великі, гнучкі, з добре розвиненою м'язовою системою і товстим,
+              зазвичай низько опущеним хвостом.</p>
+            <form class="d-flex justify-content-center" role="search" method="post" action="/cat">
+              <input type="search" name="cat" value="Бенгальська" hidden>
+              <button class="btn btn-outline-success" type="submit">Детальніше</button>
+            </form>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        <h4>Топ котиків</h4>
-      </div>
-      <div class="container text-center" style="padding-top: 2em;">
+    </div>
+  </div>
+
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
         <div class="row">
-          <div class="col">
-            <div class="card">
-                <img src="https://faunistics.com/wp-content/uploads/2020/07/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Манчкін</h5>
-                  <p class="card-text">Впреше такий тип кішок помітили в 1930 році в Англії, але через деякий час вони зникли з невідомих причин.</p>
-                  <form class="d-flex justify-content-center" role="search" method="post" action="/cat">
-                    <input type="search" name="cat" value="Манчкін" hidden>
-                    <button class="btn btn-outline-success" type="submit">Детальніше</button>
-                  </form>
-                </div>
-              </div>
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer text</h5>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+              aliquam voluptatem veniam, est atque cumque eum delectus sint!
+            </p>
           </div>
-          <div class="col">
-            <div class="card">
-                <img src="https://www.ferra.ru/imgs/2022/03/28/06/5330659/67d72c425d00e3d45f382a1841f907b571e52296.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Канадський сфінкс</h5>
-                  <p class="card-text">Вважають, що лисі кішки були відомі ацтекам. Вони потрапили в розплідник у штаті Орегон, де й поклали початок основним лініям канадських сфінксів.</p>
-                  <form class="d-flex justify-content-center" role="search" method="post" action="/cat">
-                    <input type="search" name="cat" value="Канадський сфінкс" hidden>
-                    <button class="btn btn-outline-success" type="submit">Детальніше</button>
-                  </form>
-                </div>
-              </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer text</h5>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+              aliquam voluptatem veniam, est atque cumque eum delectus sint!
+            </p>
           </div>
-          <div class="col">
-            <div class="card">
-                <img src="https://s.032.ua/section/newsInText/upload/images/news/intext/000/051/430/bengalcat_5dca69bb49d9a.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Бенгальська</h5>
-                  <p class="card-text">Бенгальські кішки великі, гнучкі, з добре розвиненою м'язовою системою і товстим, зазвичай низько опущеним хвостом.</p>
-                  <form class="d-flex justify-content-center" role="search" method="post" action="/cat">
-                    <input type="search" name="cat" value="Бенгальська" hidden>
-                    <button class="btn btn-outline-success" type="submit">Детальніше</button>
-                  </form>
-                </div>
-              </div>
-          </div>
+          <!--Grid column-->
         </div>
+        <!--Grid row-->
       </div>
-      <footer class="bg-light text-center text-lg-start">
-        <!-- Grid container -->
-        <div class="container p-4">
-          <!--Grid row-->
-          <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Footer text</h5>
-      
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint!
-              </p>
-            </div>
-            <!--Grid column-->
-      
-            <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Footer text</h5>
-      
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint!
-              </p>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </div>
-        <!-- Grid container -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2020 Copyright:
-          <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-      </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </body>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+</body>
+
 </html>
